@@ -2,17 +2,21 @@ import { useLoaderData } from "react-router-dom";
 import Header from "../../SharedPages/Header/Header";
 import LeftSideNav from "../../SharedPages/LeftSideNav/LeftSideNav";
 import CardData from "../../SharedPages/CardData/CardData";
+import BannerSlider from "../../SharedPages/BannerSlider/BannerSlider";
 
 
 
 const Home = () => {
-    const data = useLoaderData()
-    console.log(data);
-    return (
+      const data = useLoaderData()
+      console.log(data);
+       return (
         <div>
             
             <Header></Header>
-       
+         
+
+          <BannerSlider></BannerSlider>
+
          <div className="grid grid-cols-1 md:grid-cols-3  gap-6 border">
               <div className="borer border-pink-400 min-h-screen">
                 <h1>left navbar here</h1>
