@@ -1,9 +1,13 @@
+import { useLoaderData } from "react-router-dom";
 import Header from "../../SharedPages/Header/Header";
 import LeftSideNav from "../../SharedPages/LeftSideNav/LeftSideNav";
+import CardData from "../../SharedPages/CardData/CardData";
 
 
 
 const Home = () => {
+    const data = useLoaderData()
+    console.log(data);
     return (
         <div>
             
@@ -17,6 +21,14 @@ const Home = () => {
 
             <div className="border border-blue-950 col-span-2 min-h-screen">
                  <h1>cart section</h1>
+                     <div className="grid grid-cols-1 md:grid-cols-2">
+                     {
+                    data.map(singleData =><CardData 
+                    key={singleData.id}
+                    data={singleData}
+                    ></CardData>)
+                 }
+                     </div>
             </div>
             
             
